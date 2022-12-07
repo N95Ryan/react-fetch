@@ -10,16 +10,16 @@ function App() {
 	 <h2 class="brand">Veuillez vous identifier</h2>
         <form id="form" action="">
           <div>
-            <input type="text" name="" id="name" required placeholder=" "></input>
+            <input type="text" id="name" required placeholder=" "></input>
             <label>Identifiant : </label>
           </div>
 
 		  <div>
-            <input type="text" name="" id="name" required placeholder=" "></input>
+            <input type="text" id="password" required placeholder=" "></input>
             <label>Mot de passe : </label>
           </div>
 
-          <input id="submit" type="submit" value="Se connecter"></input>
+          <input className="button" id="submit" type="submit" value="Se connecter"></input>
         </form>  
   </div>
     </div>
