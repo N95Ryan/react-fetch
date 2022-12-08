@@ -1,0 +1,138 @@
+.App {
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  transition: all 1s;
+  text-decoration: none;
+}
+
+html, body{
+	font-family: 'Open Sans Condensed', sans-serif;
+	letter-spacing: 0.2em;
+	font-size: 0.98em;
+  background-color: #2893da;
+} 
+
+.wrapper{
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "nav-bar"
+    "box"
+    "footer";
+}
+
+.brand{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 2.3em;
+  text-transform: uppercase;
+  margin-left: 20px;
+  padding: 10px 10px;
+  line-height: 1.42857;
+  color: rgb(0, 0, 0);
+}
+
+.box-wrapper{
+  height: 630px;
+  position: relative;  
+}
+
+p {
+	color: white;
+	font-weight: bold;
+	padding-bottom: 1em;
+	align-content : flex-start;
+}
+
+
+.box{
+  grid-area: box;
+  position: absolute;
+	top:  50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 450px;
+	background-color: rgb(31, 31, 31);
+	padding: 60px;
+	box-sizing: border-box;
+	border: 4px solid rgba(255, 255, 255, 0.1);
+  
+}
+
+.box h2{
+	margin: 0 0 40px;
+	padding: 0;
+	color: rgb(255, 255, 255);
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.box input{
+	padding: 10px 0;
+	margin-bottom: 30px;
+
+}
+
+.box textarea{
+	height: 80px;
+	padding: 10px 0;
+	margin-bottom: 40px;
+}
+
+.box input, .box textarea {
+	width: 100%;
+	box-sizing: border-box;
+	box-shadow: none;
+	outline: none;
+	border: none;
+	border-bottom: 2px solid #999;
+}
+.box textarea{	
+	margin-bottom: 20px;
+}
+
+.box input[type="submit"]{
+  font-size: 1.1em;
+	border-bottom: none;
+	cursor: pointer;
+  background: #1b9d14;
+	color: #FFF;
+	margin-bottom: 0;
+}
+
+.box form div{
+	position: relative;
+}
+
+.box form div label {
+	position: absolute;
+	top: 10px;
+	left: 30px;
+	color: rgb(0, 0, 0);
+	pointer-events: none;
+}
+
+.box input:focus ~ label, .box textarea:focus ~ label, 
+.box input:valid ~ label, .box textarea:valid ~ label {
+	left: 20;
+  color: #000000;
+	font-size: 1em;
+}
+
+.box input:focus ~ label, .box textarea:focus ~ label, 
+.box input:valid, .box textarea:valid {
+  border-bottom: 2px solid #150435;
+}
